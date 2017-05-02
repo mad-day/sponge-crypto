@@ -96,7 +96,7 @@ func (c *Crypto) Reset() {
 
 func (c *Crypto) Size() int { return int(c.Len) }
 
-func (c *Crypto) BlockSize() int { return int(64-c.Len) }
+func (c *Crypto) BlockSize() int { return int(c.Len) }
 
 type Encrypter struct{
 	Crypto
