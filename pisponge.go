@@ -110,7 +110,7 @@ type PiCrypto struct{
 }
 
 func (c *PiCrypto) Construct(l int) error{
-	if !((0<l)&&(l<256)) { return fmt.Errorf("Must be 0 < size < 64 : %d",l) }
+	if !((0<l)&&(l<256)) { return fmt.Errorf("Must be 0 < size < 256 : %d",l) }
 	c.Len = uint8(l)
 	c.Off = 0
 	for i:=0 ; i<256 ; i++ {
