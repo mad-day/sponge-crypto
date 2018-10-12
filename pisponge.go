@@ -1,5 +1,6 @@
 // This software is subject to the Creative Commons "CC0" license
-
+// Attribution: The π-function comes from the π-Cipher
+// https://aezoo.compute.dtu.dk/doku.php?id=%CF%80-cipher
 
 package spongecrypto
 
@@ -103,6 +104,11 @@ func zpi(in,out *[256]byte) {
 	}
 }
 
+/*
+An orthogonal implementation of the Sponge-Construction
+using the π-function from the π-Cipher
+https://aezoo.compute.dtu.dk/doku.php?id=%CF%80-cipher
+*/
 type PiCrypto struct{
 	Len uint8 // 0 < Len < 256
 	Off uint8 // 0 <= Off < Len
