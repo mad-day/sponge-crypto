@@ -6,6 +6,10 @@ package spongecrypto
 import "golang.org/x/crypto/salsa20/salsa"
 import "fmt"
 
+/*
+An orthogonal implementation of the Sponge-Construction using the
+Core208() function of the salsa20 cipher.
+*/
 type Crypto struct{
 	Len uint8 // 0 < Len < 64
 	Off uint8 // 0 <= Off < Len
